@@ -1,0 +1,39 @@
+package com.string.org;
+
+class StringTypes {
+
+	public static void main(String[] args) {
+		System.out.println("***Immutable***");
+		System.out.println();
+		
+		String s="Hello world";
+		System.out.println(s);
+		System.out.println(System.identityHashCode(s));
+		
+		String s1="Hello world";
+		System.out.println(s1);
+		System.out.println(System.identityHashCode(s1));
+		
+		String s2=s+" "+s1;
+		System.out.println(s2);
+		System.out.println(System.identityHashCode(s2));
+		System.out.println();
+		
+		System.out.println("***Mutable***");
+		System.out.println();
+		
+		StringBuffer a1=new StringBuffer("Selenium");
+		System.out.println(a1);
+		System.out.println(System.identityHashCode(a1));
+		
+		StringBuffer a2=new StringBuffer("Selenium");
+		System.out.println(a2);
+		System.out.println(System.identityHashCode(a2));
+		
+		a2=a1.append(" "+a2);
+		System.out.println(a2);
+		System.out.println(System.identityHashCode(a2));
+		
+	}
+
+}

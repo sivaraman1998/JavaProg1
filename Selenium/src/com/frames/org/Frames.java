@@ -1,0 +1,35 @@
+package com.frames.org;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Frames {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", 
+	"C:\\Users\\raman\\OneDrive\\Documents\\Eclipse\\Selenium\\Driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://demo.automationtesting.in/Frames.html");
+		driver.manage().window().maximize();
+		
+		driver.switchTo().frame("singleframe");
+		WebElement text1 = driver.findElement(By.xpath("//input[@type='text']"));
+		text1.sendKeys("Java");
+		
+		driver.switchTo().defaultContent();
+		
+		driver.findElement(By.xpath("(//a[@class='analystic'])[2]")).click();
+		
+		WebElement outer = driver.findElement(By.xpath("//iframe[@src='MultipleFrames.html']"));
+		driver.switchTo().frame(outer);
+		
+		WebElement inner = driver.findElement(By.xpath("//iframe[@src='SingleFrame.html']"));
+		driver.switchTo().frame(inner);
+		
+		WebElement text2 = driver.findElement(By.xpath("//input[@type='text']"));
+		text2.sendKeys("Selenium");
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.javaclass;
+
+public class Sysout {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

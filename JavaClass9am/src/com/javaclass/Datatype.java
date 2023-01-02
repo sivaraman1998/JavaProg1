@@ -1,0 +1,32 @@
+package com.javaclass;
+
+public class Datatype {
+	public static void main(String[] args) {
+		byte a=12;
+		System.out.println(a);
+		
+		short b=12345;
+		System.out.println(b);
+		
+		int c=1234567890;
+		System.out.println(c);
+		
+		long d=1234567891011121314l;
+		System.out.println(d);
+		
+		float e=13245456.4546578765f;
+		System.out.println(e);
+		
+		double f=88979.897899855866;
+		System.out.println(f);
+		
+		char g='l';
+		System.out.println(g);
+		
+		boolean h=true;
+		System.out.println(h);
+		
+		String s="Sivaraman";
+		System.out.println(s);
+	}
+}

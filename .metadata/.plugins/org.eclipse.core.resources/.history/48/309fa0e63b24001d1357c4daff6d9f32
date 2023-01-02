@@ -1,0 +1,30 @@
+package com.map.org;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class MapClass {
+
+	public static void main(String[] args) {
+		Map<Integer, String> tm=new TreeMap<>();
+		Map<String, Integer> lhm=new LinkedHashMap<>();
+		
+		tm.put(101, "Sowpriya");
+		tm.put(102, "Arun");
+		tm.put(104, "Shaji");
+		tm.put(103, "Yasin");
+		tm.put(105, "Bhavani");
+		
+		lhm.put("Pandi", 101);
+		lhm.put("Suresh", 102);
+		lhm.put("Gomathi", 103);
+		lhm.put("Muthu", 105);
+		lhm.put("Vichu", 105);
+		
+		System.out.println(tm);
+		System.out.println(lhm);
+		
+	}
+
+}

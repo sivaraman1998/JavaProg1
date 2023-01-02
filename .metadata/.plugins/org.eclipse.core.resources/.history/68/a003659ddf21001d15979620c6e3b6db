@@ -1,0 +1,9 @@
+package com.string.org;
+
+class StringTypes {
+
+	public static void main(String[] args) {
+		System.out.println("Hi");
+	}
+
+}

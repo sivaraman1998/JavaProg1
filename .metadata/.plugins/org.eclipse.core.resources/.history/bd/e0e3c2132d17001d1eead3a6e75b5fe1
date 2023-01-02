@@ -1,0 +1,23 @@
+package com.constructor;
+
+public class ConstA {
+	public ConstA() {
+		System.out.println("My Car");
+	}
+	public ConstA(String name) {
+		System.out.println("BMW");
+	}
+	public ConstA(int speed) {
+		System.out.println(speed+" kmp/h");
+	}
+	public ConstA(int gear1, String type) {
+		System.out.println(gear1+" gears, "+type);	
+	}
+	
+	public static void main(String[] args) {
+		@SuppressWarnings("unused")
+		ConstA obj=new ConstA();
+		
+	}
+
+}

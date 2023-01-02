@@ -1,0 +1,19 @@
+package com.loops;
+
+public class Do_While {
+
+	public static void main(String[] args) {
+//		int a=11;
+//		do {
+//			System.out.println(a);
+//			a++;
+//		}while(a<11);
+		
+		int b=12;
+		while(b<=12) {
+			System.out.println(b);
+			b++;
+		}
+	}
+
+}

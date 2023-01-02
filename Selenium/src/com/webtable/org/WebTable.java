@@ -1,0 +1,57 @@
+package com.webtable.org;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WebTable {
+	public static void main(String[] args) throws IOException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\raman\\OneDrive\\Documents\\Eclipse\\Selenium\\Driver\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://testleaf.herokuapp.com/pages/table.html");
+		
+		System.out.println("****All data*****");
+		List<WebElement> alldata = driver.findElements(By.xpath("//tbody/tr/td"));
+		
+		for (WebElement all : alldata) {
+			String text1 = all.getText();
+			System.out.println(text1);
+		}
+		
+		System.out.println("***Row data*****");
+		List<WebElement> row3 = driver.findElements(By.xpath("//tbody/tr[3]"));
+		
+		for (WebElement row : row3) {
+			String text2 = row.getText();
+			System.out.println(text2);
+		}
+		System.out.println();
+		System.out.println("*****Column data*******");
+		List<WebElement> col = driver.findElements(By.xpath("//tbody/tr[3]/td[1]"));
+		
+		for (WebElement col1 : col) {
+			String text3 = col1.getText();
+			System.out.println(text3);
+		}
+		
+		WebElement click1 = driver.findElement(By.xpath("(//input[@type='checkbox'])[1]"));
+		click1.click();
+		driver.findElement(By.xpath("(//input[@type='checkbox'])[2]")).click();
+		driver.findElement(By.xpath("(//input[@type='checkbox'])[3]")).click();
+		
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		File dest=new File("C:\\Users\\raman\\OneDrive\\Documents\\Eclipse\\Selenium\\Screenshot\\table.png");
+		FileUtils.copyFile(source, dest);
+		
+	}
+}

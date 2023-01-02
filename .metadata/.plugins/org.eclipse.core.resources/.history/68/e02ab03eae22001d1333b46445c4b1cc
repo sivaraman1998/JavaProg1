@@ -1,0 +1,38 @@
+package com.list.org;
+
+import java.util.ArrayList;
+import java.util.Vector;
+
+public class ArrList {
+
+	public static void main(String[] args) {
+//		ArrayList <Object> alist=new ArrayList <Object>();
+//		
+//		alist.add("Siva");
+//		alist.add(34);
+//		alist.add(52.3);
+//		alist.add('S');
+//		
+//		System.out.println(alist);
+		
+		Vector <Object> vec=new Vector<Object>();
+		
+		vec.add("Siva");
+		vec.add(54);
+		vec.add(23.3);
+		vec.add('S');
+		
+		System.out.println(vec);
+		
+		int size = vec.size();
+		System.out.println(size);
+		
+		Object set1 = vec.set(3, "Set");
+		System.out.println(vec);
+		
+		Object get1 = vec.get(3);
+		System.out.println(vec);
+		
+	}
+
+}

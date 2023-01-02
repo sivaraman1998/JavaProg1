@@ -1,0 +1,40 @@
+package com.javaclass;
+
+//class Overriding {
+//	public void show() {
+//		System.out.println("Superclass Method");
+//	}
+//}
+//class Overriding1 extends Overriding{
+//	public void show() {
+//		System.out.println("Subclass Method");
+//	}
+//}
+//public class Override{
+//	public static void main(String[] args) {
+//		Overriding obj=new Overriding1();
+//		obj.show();
+//	}
+//
+//}
+class Overload{
+	public void bank() {
+		System.out.println("Simple Interest in %");
+	}
+	public void bank(int a) {
+		System.out.println("Fixed deposit interest rates in %");
+	}
+	public void bank(int a,float f) {
+		System.out.println("Debit limit");
+	}
+	public void bank(int a,double d,String s ) {
+		System.out.println("Loan");
+	}
+	public static void main(String[] args) {
+		Override obj=new Override();
+		obj.bank();
+		obj.bank(3);
+		obj.bank(5, 4.67f);
+		obj.bank(8, 56.3, "String");
+	}
+}

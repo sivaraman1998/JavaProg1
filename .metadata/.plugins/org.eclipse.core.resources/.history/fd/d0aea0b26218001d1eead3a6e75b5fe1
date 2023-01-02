@@ -1,0 +1,30 @@
+package com.arithmetic;
+
+public class Arithmetic {
+
+	public void add1(int a,int b) {
+		System.out.println(a+b);
+	}
+	public void sub(int c,int d) {
+		System.out.println(c-d);
+	}
+	public void multiply(int e,int f) {
+		System.out.println(e*f);
+	}
+	public void div(int g,int h) {
+		System.out.println(g/h);
+	}
+	public void modulus(int i,int j) {
+		System.out.println(i%j);
+	}
+	
+	public static void main(String[] args) {
+		Arithmetic obj=new Arithmetic();
+		obj.add1(5, 12);
+		obj.sub(54, 47);
+		obj.multiply(6, 3);
+		obj.div(16, 3);
+		obj.modulus(16, 3);
+	}
+
+}

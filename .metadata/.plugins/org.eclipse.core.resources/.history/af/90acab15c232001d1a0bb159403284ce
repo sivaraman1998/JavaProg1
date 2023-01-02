@@ -1,0 +1,11 @@
+package com.abstract1.org;
+
+public abstract class Abstract1 {
+
+	public static void main(String[] args) {
+
+			
+		
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.oops.org;
+
+class Cars{
+    void General(){
+        System.out.println("This car is general type");        
+    }
+    void Sports(){
+        System.out.println("This car is sports type");        
+    }
+}
+class GeneralCars extends Cars{
+    void General(){
+        super.General();
+    }
+}
+class SportsCars extends Cars{
+    void Sports(){
+        super.Sports();
+    }
+}
+class Multilevel{
+	public static void main(String args[]){
+		SportsCars obj1=new SportsCars();
+		obj1.General();
+		obj1.Sports();
+	}
+}

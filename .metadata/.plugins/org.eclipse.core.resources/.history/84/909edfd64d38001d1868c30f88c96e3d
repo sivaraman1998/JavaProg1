@@ -1,0 +1,53 @@
+package com.miniproject.org;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Mini_Project {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", 
+		"C:\\Users\\raman\\OneDrive\\Documents\\Eclipse\\Selenium\\Driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://adactinhotelapp.com/");
+		
+		driver.findElement(By.id("username")).sendKeys("Sivaraman1998");
+		driver.findElement(By.id("password")).sendKeys("9444722630");
+		Thread.sleep(2000);
+		driver.findElement(By.id("login")).click();
+		
+		WebElement loc = driver.findElement(By.id("location"));
+		Select s1=new Select(loc);
+		s1.selectByIndex(2);
+		
+		WebElement hotels = driver.findElement(By.id("hotels"));
+		Select s2=new Select(hotels);
+		s2.selectByValue("Hotel Sunshine");
+		
+		WebElement type = driver.findElement(By.id("room_type"));
+		Select s3=new Select(type);
+		s3.selectByVisibleText("Double");
+		
+		WebElement num = driver.findElement(By.id("room_nos"));
+		Select s4=new Select(num);
+		s4.selectByVisibleText("3 - Three");
+		
+		driver.findElement(By.id("datepick_in")).sendKeys("22/11/2022");
+		driver.findElement(By.id("datepick_out")).sendKeys("22/11/2023");
+		
+		WebElement adult = driver.findElement(By.id("adult_room"));
+		Select s5=new Select(adult);
+		s5.selectByVisibleText("4 - Four");
+		
+		WebElement child = driver.findElement(By.id("child_room"));
+		Select s6=new Select(child);
+		s6.selectByVisibleText("2 - Two");
+		Thread.sleep(5000);
+	
+		driver.findElement(By.id("Submit")).click();
+	
+	}
+}

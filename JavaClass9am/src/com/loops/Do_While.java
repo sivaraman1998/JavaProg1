@@ -1,0 +1,20 @@
+package com.loops;
+
+public class Do_While {
+
+	public static void main(String[] args) {
+		int a=11;
+		do {
+			System.out.println(a);
+			a++;
+		}while(a<=15);
+		
+//		int a=14;
+//		while(a<=15) {
+//			
+//			System.out.println(a);
+//			a++;
+//		}
+	}
+
+}

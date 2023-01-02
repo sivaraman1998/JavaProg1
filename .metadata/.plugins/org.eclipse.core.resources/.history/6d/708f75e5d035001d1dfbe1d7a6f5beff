@@ -1,0 +1,10 @@
+package com.jsexecutor.org;
+
+public class JsExecutor {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

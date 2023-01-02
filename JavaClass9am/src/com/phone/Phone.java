@@ -1,0 +1,21 @@
+package com.phone;
+
+import com.company.CompanyInfo;
+
+public class Phone {
+		public void phoneInfo() {
+			System.out.println("Redmi 9 power");
+		}
+		public void phoneInfo(int a) {
+			System.out.println("RAM : "+a+"GB");
+		}
+		public void phoneInfo(int mod, long ip) {
+			System.out.println("Model No : "+mod+"	"+"Ip address : "+ip);
+		}
+		public static void main(String[] args) {
+			Phone obj=new Phone();
+			obj.phoneInfo();
+			obj.phoneInfo(4);
+			obj.phoneInfo(15421,9215547624625l);
+		}
+}

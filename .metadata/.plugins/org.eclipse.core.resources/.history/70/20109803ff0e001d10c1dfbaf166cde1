@@ -1,0 +1,37 @@
+package com.javaclass;
+
+public class OopsClass {
+	private void studentname() {
+		System.out.println("Sivaraman S");
+	}
+	private void studentId() {
+		System.out.println(720815101031l);
+
+	}
+	private void mailId() {
+		// TODO Auto-generated method stub
+
+	}
+	private void password() {
+		// TODO Auto-generated method stub
+
+	}
+	private void phonenumber() {
+		// TODO Auto-generated method stub
+
+	}
+	private void collegename() {
+		// TODO Auto-generated method stub
+
+	}
+	private void dept() {
+		// TODO Auto-generated method stub
+
+	}
+	public static void main(String[] args) {
+		OopsClass obj=new OopsClass();
+		obj.studentname();
+		obj.studentId();
+	}
+
+}
